@@ -7,5 +7,5 @@ $(document).ready(function(){
 	$('.weather_data[id="humidity"]').html(weather_data_now.main.humidity);
 	$('.weather_data[id="wind_speed"]').html(weather_data_now.wind.speed);
 	$('.weather_data[id="wind_deg"]').html(weather_data_now.wind.deg);
-	$('.weather_data[id="rain"]').html(weather_data_now.rain.3h);
+	$('.weather_data[id="rain"]').html(weather_data_now.rain);
 });
