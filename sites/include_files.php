@@ -30,7 +30,6 @@ foreach (glob("sites/*/php/*.php") as $php_widget)
 
 foreach (glob($widgets_dir+"*/js/*.js") as $js_widget)
 {
-	echo $js_widget
     echo '<script type="text/javascript" src="'+$js_widget+'"></script>';
 }
 
