@@ -1,8 +1,16 @@
 $(document).ready(function(){
 
-$(".weather_data").each(function(){
-		$(this).html(weather_data_now.main.$(this).id);
-		//$(this).html(weather_data_now.main.find($(this.attr("id"))));
-	    //$("#temperature").html(weather_data_now.main.temp);
+	var my_weather_data_now_array = $.parseJSON(weather_data_now);
+	var myDomObject;
+	$(".weather_data").each(function(){
+		myDomObject = $(this);
+		myID = $(this),attr("id");
+		
+		$.each(my_weather_data_now_array, function(){
+			if($(this)[myID]){
+				myDomObject.html($(this)[myID]);
+				break;
+			}
+		});
 	});
 });
