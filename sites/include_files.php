@@ -22,9 +22,10 @@ foreach (glob($plugins_dir+"*/*.css") as $css_plugin)
     echo '<script type="text/javascript" src="'+$css_plugin+'"></script>';
 }
 
-foreach (glob("sites/*/php/*.php"))
+foreach (glob("sites/*/php/*.php") as $test)
 {
-    include this;
+	echo $test;
+    include $test;
 }
 foreach (glob($widgets_dir+"*/js/*.js") as $js_widget)
 {
