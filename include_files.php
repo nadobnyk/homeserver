@@ -17,12 +17,12 @@ foreach (glob($plugins_dir."*/*.css") as $css_plugin)
     echo '<script type="text/javascript" src="'.$css_plugin.'"></script>';
 }
 
-foreach (glob($plugins_dir."*/js") as $js_plugin)
+foreach (glob($plugins_dir."*/js/*.js") as $js_plugin)
 {
     echo '<script type="text/javascript" src="'.$js_plugin.'"></script>';
 }
 
-foreach (glob($plugins_dir."*/css") as $css_plugin)
+foreach (glob($plugins_dir."*/css/*.css") as $css_plugin)
 {
     echo '<script type="text/javascript" src="'.$css_plugin.'"></script>';
 }
