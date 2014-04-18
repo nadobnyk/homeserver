@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
 	$("#description").html(weather_data_now.weather[0].description);
-	var required_data = $(".weather_data").map(function(){return $(this).attr("id");}).get();
+	var required_data = $(".weather_data");
 	parse_WeatherData(weather_data_now);
 
 	function parse_WeatherData(my_weather_data_now){

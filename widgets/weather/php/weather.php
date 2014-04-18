@@ -7,3 +7,41 @@ $weather_data_today = file_get_contents("http://api.openweathermap.org/data/2.5/
     var weather_data_now = <?php echo $weather_data_now; ?>;
     var weather_data_today = <?php echo $weather_data_today; ?>;
 </script>
+
+
+<!-- Aufbau des JSON files
+
+
+{
+	"coord":{"lon":13.49,"lat":52.5},
+	"sys":{"message":0.0069,"country":"DE",
+	"sunrise":1397793622,"sunset":1397844613},
+	"weather":[
+		{"id":521,"main":"Rain","description":"Regenschauer","icon":"09d"}
+	],
+	"base":"cmc stations",
+	"main": {
+		"temp":9.78,
+		"pressure":1012,
+		"humidity":87,
+		"temp_min":8,
+		"temp_max":11.11
+	},
+	"wind":	{
+		"speed":2.6,
+		"deg":160
+	},
+	"rain":
+		{
+		"3h":0
+		},
+	"clouds": {
+		"all":75
+		},
+	"dt":1397844396,
+	"id":7290255,
+	"name":"Berlin Treptow",
+	"cod":200
+}
+
+-->
