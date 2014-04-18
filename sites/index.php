@@ -1,5 +1,5 @@
 <?php
-include 'php/weather';
+include 'php/weather.php';
 ?>
 
 <script src="../plugins/jQuery/jquery-1.11.0.min.js"></script>
