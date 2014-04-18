@@ -13,7 +13,6 @@ $(document).ready(function(){
 			if (my_weather_data_now.hasOwnProperty(key))
 			{
 				$("#"+key).html(my_weather_data_now[key]);
-				break;
 			}else{
 				if(my_weather_data_now.children().length > 0)
 				my_weather_data_now.children().each(function(){
