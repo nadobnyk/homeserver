@@ -1,8 +1,10 @@
 $(document).ready(function(){
 	
-	var my_weather_data_now = weather_data_now.firstChild();
+	//var my_weather_data_now = weather_data_now.firstChild();
 
+	$.each(weather_data_now, function(key, value) {
+	    console.log(key, value);
+	});
 
-
-    $("#description").html(my_weather_data_now.lon);     
+    $("#description").html(weather_data_now.weather[0].description);     
 });
