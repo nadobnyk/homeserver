@@ -6,7 +6,7 @@ $(document).ready(function(){
 	function find_weather_data(key, data){
 		if(data[key].children() > 0){
 			data[key].children().each(function(){
-				find_weather_data(key, $(this)));
+				find_weather_data(key, $(this));
 			});
 	    }else{
 	    	if(data.hasOwnProperty(key)){
