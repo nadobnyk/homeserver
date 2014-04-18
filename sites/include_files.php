@@ -9,7 +9,7 @@ echo $glob[0];
 
 foreach (glob($plugins_dir+"*/*.php") as $php_plugin)
 {
-    include $php_plugin;
+    require_once $php_plugin;
 
 }
 foreach (glob($plugins_dir+"*/*.js") as $js_plugin)
@@ -25,7 +25,7 @@ foreach (glob($plugins_dir+"*/*.css") as $css_plugin)
 foreach (glob("sites/*/php/*.php") as $test)
 {
 	echo $test;
-    include $test;
+    require_once $test;
 }
 foreach (glob($widgets_dir+"*/js/*.js") as $js_widget)
 {
