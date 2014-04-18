@@ -10,7 +10,7 @@ $(document).ready(function(){
 			});
 	    }else{
 	    	if(data.hasOwnProperty(key)){
-	    		$('.weather_data[id="'+key+'"]')html(data[key]);
+	    		$('.weather_data[id="'+key+'"]').html(data[key]);
 	    	}
 	    }
 	}
