@@ -9,7 +9,6 @@ $(document).ready(function(){
 		$.each(my_weather_data_now_array, function(){
 			if($(this)[myID]){
 				myDomObject.html($(this)[myID]);
-				break;
 			}
 		});
 	});
