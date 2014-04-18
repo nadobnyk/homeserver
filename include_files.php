@@ -1,8 +1,6 @@
 <?php
-echo "<br>import->start<br>";
-
 $plugins_dir ="plugins/";
-$widgets_dir = "sites/";
+$widgets_dir = "widgets/";
 
 $glob = glob("sites/*/php/*.php");
 require $glob[0];
@@ -37,6 +35,4 @@ foreach (glob($widgets_dir."*/css/*.css") as $css_widget)
 {
     echo '<link rel="stylesheet" type="text/css" href="'.$css_widget.'">';
 }
-
-echo "<br>import->end<br>";
 ?>
