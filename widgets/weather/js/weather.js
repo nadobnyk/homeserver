@@ -1,3 +1,7 @@
 $(document).ready(function(){
-	    $("#temperature").html(weather_data_now.main.temp - 273.15);
+	$(".weather_data").each(){
+		$(this).html(weather_data_now.weather.($(this.attr("id"))));
+		$(this).html(weather_data_now.main.($(this.attr("id"))));
+	    //$("#temperature").html(weather_data_now.main.temp);
+	}
 });
