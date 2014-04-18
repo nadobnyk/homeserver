@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 	for(key in weather_data_now){                               
 	    if(key.indexOf("main") != -1){           
-	        image = json[key];     
+	        $("#description").html(weather_data_now[key]);     
 	        break;
 	    }
 	}
