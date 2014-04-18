@@ -1,6 +1,6 @@
 <?php
 include 'sites/include_files.php';
-echo "index.php->works";
+echo "<br>index.php->works<br>";
 ?>
 
 <div id="weather_container">
