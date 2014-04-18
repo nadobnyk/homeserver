@@ -17,7 +17,7 @@ foreach (glob($plugins_dir."*/*.css") as $css_plugin)
     echo '<script type="text/javascript" src="'.$css_plugin.'"></script>';
 }
 
-foreach (glob("sites/*/php/*.php") as $php_widget)
+foreach (glob($widgets_dir."*/php/*.php") as $php_widget)
 {
     require_once $php_widget;
 }
