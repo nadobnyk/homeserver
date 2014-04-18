@@ -1,8 +1,8 @@
 <?php
 echo "<br>import->start<br>";
 
-$plugins_dir ="../plugins/";
-$widgets_dir = "";
+$plugins_dir ="plugins/";
+$widgets_dir = "sites/";
 
 $glob = glob("*.php");
 echo $glob[0];
