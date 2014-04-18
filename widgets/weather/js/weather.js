@@ -1,14 +1,12 @@
 $(document).ready(function(){
+	alert(weather_data_now);
 
-	var myDomObject;
-	$(".weather_data").each(function(){
-		myDomObject = $(this);
-		myID = $(this).attr("id");
-		
-		$.each(weather_data_now, function(){
-			if($(this)[myID]){
-				myDomObject.html($(this)[myID]);
-			}
-		});
-	});
+	for(key in weather_data_now){                               
+	    if(key.indexOf("main") != -1){           
+	        image = json[key];     
+	        break;
+	    }
+	}
+
+
 });
