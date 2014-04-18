@@ -1,4 +1,5 @@
 <?php
+echo "import->start";
 foreach (glob("/homeserver/sites/*/php/*.php") as $php_file)
 {
     include $php_file;
@@ -28,4 +29,5 @@ foreach (glob("/homeserver/sites/*/css/*.css") as $css_file)
     echo '<link rel="stylesheet" type="text/css" href="'+$css_file+'">';
 }
 
+echo "import->end";
 ?>
