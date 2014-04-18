@@ -2,10 +2,6 @@
 $plugins_dir ="plugins/";
 $widgets_dir = "widgets/";
 
-$glob = glob("sites/*/php/*.php");
-require $glob[0];
-
-
 foreach (glob($plugins_dir."*/*.php") as $php_plugin)
 {
     require_once $php_plugin;
