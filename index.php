@@ -1,6 +1,6 @@
 <?php
-include 'sites/include_files.php';
-echo "<br>index.php->works<br>";
+require 'vendor/autoload.php';
+require 'sites/include_files.php';
 ?>
 
 <div id="weather_container">
