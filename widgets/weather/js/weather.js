@@ -1,17 +1,12 @@
 $(document).ready(function(){
-	$(".weather_data").each(function(){
-		find_weather_data($(this).attr("id"), weather_data_now)
-	});
-
-	function find_weather_data(key, data){
-		if(data[key].children() > 0){
-			data[key].children().each(function(){
-				find_weather_data(key, $(this));
-			});
-	    }else{
-	    	if(data.hasOwnProperty(key)){
-	    		$('.weather_data[id="'+key+'"]').html(data[key]);
-	    	}
-	    }
-	}
+	
+	$(".weather_data[id=description]").html(weather_data_now.weather[0].description);
+	$(".weather_data[id=temp").html(weather_data_now.main.temp);
+	$(".weather_data[id=temp_min").html(weather_data_now.main.temp_min);
+	$(".weather_data[id=temp_max").html(weather_data_now.main.temp_max);
+	$(".weather_data[id=icon").html(weather_data_now.weather[0].icon);
+	$(".weather_data[id=humidity").html(weather_data_now.main.humidity);
+	$(".weather_data[id=wind_speed").html(weather_data_now.wind.speed);
+	$(".weather_data[id=wind_deg").html(weather_data_now.wind.deg);
+	$(".weather_data[id=rain").html(weather_data_now.rain.3h);
 });
