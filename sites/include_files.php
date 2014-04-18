@@ -7,6 +7,7 @@ $widgets_dir = "sites/";
 $glob = glob("sites/*/php/*.php");
 echo $glob[0];
 
+
 foreach (glob($plugins_dir+"*/*.php") as $php_plugin)
 {
     require_once $php_plugin;
@@ -22,13 +23,14 @@ foreach (glob($plugins_dir+"*/*.css") as $css_plugin)
     echo '<script type="text/javascript" src="'+$css_plugin+'"></script>';
 }
 
-foreach (glob("sites/*/php/*.php") as $test)
+foreach (glob("sites/*/php/*.php") as $php_widget)
 {
-	echo $test;
-    require_once $test;
+    require_once $php_widget;
 }
+
 foreach (glob($widgets_dir+"*/js/*.js") as $js_widget)
 {
+	echo $js_widget
     echo '<script type="text/javascript" src="'+$js_widget+'"></script>';
 }
 
