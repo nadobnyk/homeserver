@@ -3,13 +3,24 @@ $(document).ready(function(){
 	//var my_weather_data_now = weather_data_now.firstChild();
 
 
-	$("#description").html(weather_data_now.weather[0].description);    
-	for (var key in weather_data_now) 
-	{
-	    if (weather_data_now.hasOwnProperty(key))
-	    {
-	    alert(key + " = " + weather_data_now[key]);
-	    }
+	$("#description").html(weather_data_now.weather[0].description);
+	var required_data = $(".weather_data").map(function(){return $(this).attr("id");}).get();
+	parse_WeatherData(weather_data_now);
+
+	function parse_WeatherData(my_weather_data_now){
+		required_data.each(function(){
+			key = $(this).attr("id");
+			if (my_weather_data_now.hasOwnProperty(key))
+			{
+				$("#"+key).html(my_weather_data_now[key]);
+				break;
+			}else{
+				if(my_weather_data_now.children().length > 0)
+				my_weather_data_now.children().each(function(){
+					parse_WeatherData();
+				});
+			}
+		});
 	}
      
 });
