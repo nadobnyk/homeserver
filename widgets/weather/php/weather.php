@@ -1,6 +1,6 @@
 <?php
-$weather_data_now = file_get_contents("http://api.openweathermap.org/data/2.5/weather?lat=52&lon=13");
-$weather_data_today = file_get_contents("http://api.openweathermap.org/data/2.5/forecast?lat=52&lon=13");
+$weather_data_now = file_get_contents("http://api.openweathermap.org/data/2.5/weather?lat=52&lon=13&units=metric&lang=de");
+$weather_data_today = file_get_contents("http://api.openweathermap.org/data/2.5/forecast?lat=52&lon=13&units=metric&lang=de");
 ?>
 
 <script type="text/javascript">
