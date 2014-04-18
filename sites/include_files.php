@@ -4,7 +4,8 @@ echo "<br>import->start<br>";
 $plugins_dir ="../plugins/";
 $widgets_dir = "";
 
-echo glob("*.php")[0];
+$glob = glob("*.php");
+echo $glob[0];
 
 foreach (glob($plugins_dir+"*/*.php") as $php_plugin)
 {
